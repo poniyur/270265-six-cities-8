@@ -1,7 +1,7 @@
 # Личный проект «Шесть городов»
 
 * Студент: [Николай Полторак](https://up.htmlacademy.ru/react/8/user/270265).
-* Наставник: `Неизвестно`.
+* Наставник: [Ирина Черкасова](https://htmlacademy.ru/profile/raccoonlemon).
 
 ---
 
