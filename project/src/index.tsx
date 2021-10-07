@@ -4,6 +4,8 @@ import App from './components/app/app';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App
+      offersCount = {5}
+    />
   </React.StrictMode>,
   document.getElementById('root'));
