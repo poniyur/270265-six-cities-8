@@ -1,10 +1,11 @@
 import {Switch, Route, BrowserRouter} from 'react-router-dom';
-import {AppRoute} from '../../const';
+import {AppRoute, AuthorizationStatus} from '../../const';
 import PageMain from '../page-main/page-main';
 import PageLogin from '../page-login/page-login';
 import PageFavorite from '../page-favorite/page-favorite';
 import PageProperty from '../page-property/page-property';
 import Page404 from '../page-404/page-404';
+import PrivateRoute from '../private-route/private-route';
 
 type AppProps = {
   offersCount: number;
@@ -25,9 +26,13 @@ function App({offersCount}: AppProps): JSX.Element {
           <PageLogin />
         </Route>
 
-        <Route exact path={AppRoute.Favorites}>
-          <PageFavorite />
-        </Route>
+        <PrivateRoute
+          exact
+          path={AppRoute.Favorites}
+          render={() => <PageFavorite />}
+          authorizationStatus={AuthorizationStatus.NoAuth}
+        >
+        </PrivateRoute>
 
         <Route exact path={AppRoute.Room}>
           <PageProperty />
