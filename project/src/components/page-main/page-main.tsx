@@ -1,11 +1,11 @@
 import Header from '../header/header';
 import PlaceCard from '../place-card/place-card';
 
-type MainProps = {
+type PageMainProps = {
   offersCount: number;
 };
 
-function Main({offersCount}: MainProps): JSX.Element {
+function PageMain({offersCount}: PageMainProps): JSX.Element {
   return (
     <div className="page page--gray page--main">
       <Header withNav />
@@ -96,4 +96,4 @@ function Main({offersCount}: MainProps): JSX.Element {
   );
 }
 
-export default Main;
+export default PageMain;
